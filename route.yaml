@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: migiq-smoke
+spec:
+  to:
+    kind: Service
+    name: migiq-smoke
+  port:
+    targetPort: 8080

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: migiq-smoke
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: migiq-smoke
+  template:
+    metadata:
+      labels:
+        app: migiq-smoke
+    spec:
+      containers:
+        - name: migiq-smoke
+          image: placeholder
+          ports:
+            - containerPort: 8080
+              name: http
